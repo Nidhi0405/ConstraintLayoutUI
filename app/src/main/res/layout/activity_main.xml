@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:id="@+id/InstagramLogo"
+            android:src="@drawable/instagram_logo"
+            android:layout_gravity="top|start" />
+
+        <ImageButton
+            android:id="@+id/HeartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/heart"
+            android:layout_gravity="top|center"
+            android:layout_marginStart="120dp"/>
+
+        <ImageButton
+            android:id="@+id/MessageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:background="@null"
+            android:src="@drawable/message"
+            android:layout_marginTop="5dp"/>
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
