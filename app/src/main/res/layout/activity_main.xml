@@ -42,16 +42,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/my_story"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/mark_zuckerberg"
-        android:background="@drawable/round_button"
-        android:layout_margin="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/instagramLogo"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/storyRecyclerView"
         android:layout_width="wrap_content"
@@ -60,7 +50,7 @@
         android:layout_marginStart="152dp"
         android:layout_marginTop="72dp"
         android:scrollbars="horizontal"
-        app:layout_constraintStart_toEndOf="@id/my_story"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/instagramLogo">
 
 
