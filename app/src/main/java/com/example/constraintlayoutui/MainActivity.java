@@ -22,12 +22,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init(){
-        storiesBar = findViewById(R.id.storyRecyclerView);
+        storiesBar = findViewById(R.id.storiesBar);
         List<Story> stories = new ArrayList<>();
 
         stories.add(new Story(false));
         stories.add(new Story(false));
-        stories.add(new Story(false));
+        stories.add(new Story(true));
+        stories.add(new Story(true));
         stories.add(new Story(false));
         stories.add(new Story(true));
         stories.add(new Story(false));
