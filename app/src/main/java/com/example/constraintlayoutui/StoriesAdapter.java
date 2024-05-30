@@ -13,8 +13,9 @@ import java.util.List;
 
 public class StoriesAdapter extends RecyclerView.Adapter<StoriesAdapter.StoriesViewHolder>{
 
-    private List<Story> stories;
-    private Context context;
+    private final List<Story> stories;
+    private final Context context;
+
 
     public StoriesAdapter(List<Story> stories, Context context) {
         this.stories = stories;
@@ -35,7 +36,7 @@ public class StoriesAdapter extends RecyclerView.Adapter<StoriesAdapter.StoriesV
     public void onBindViewHolder(@NonNull StoriesViewHolder holder, int position) {
         //changing the background color if the story is seen
         if(stories.get(position).isSeen()){
-            holder.storyOutline.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
+            //holder.storyOutline.setCardBackgroundColor(context.getResources().getColor(R.color.grey));
         }
 
     }
@@ -47,11 +48,13 @@ public class StoriesAdapter extends RecyclerView.Adapter<StoriesAdapter.StoriesV
 
     //viewHolder
     public static class StoriesViewHolder extends RecyclerView.ViewHolder{
-        private CardView storyOutline;
+
+        public CardView storyOutline;
+
         public StoriesViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            itemView.findViewById(R.id.storyOutline);
+            itemView.findViewById(R.id.outline);
         }
     }
 }
