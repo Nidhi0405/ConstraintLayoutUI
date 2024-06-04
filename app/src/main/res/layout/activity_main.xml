@@ -6,65 +6,85 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/instagramLogo"
-            android:layout_width="120dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_margin="15dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/instagram_logo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+    
+            <ImageView
+                android:id="@+id/instagramLogo"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/instagram_logo"
+                app:layout_constraintStart_toStartOf="parent" />
+    
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:id="@+id/frame_favorite"
+                app:layout_constraintEnd_toStartOf="@id/frame_inbox">
+                
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="7dp"
+                    android:src="@drawable/favorite"/>
 
-        <ImageButton
-            android:id="@+id/heartButton"
-            android:layout_width="wrap_content"
+                <View
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/bg_round"
+                    android:backgroundTint="@color/red"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:id="@+id/frame_inbox"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/inbox"
+                    android:padding="12dp"/>
+
+                <TextView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_round"
+                    android:backgroundTint="@color/red"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/white"
+                    android:textSize="9dp"/>
+
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/story_recyclerView_id"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:paddingTop="7dp"
-            android:layout_marginEnd="4dp"
-            android:background="@null"
-            android:src="@drawable/heart"
-            app:layout_constraintEnd_toStartOf="@id/messageButton"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/instagramLogo"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:scrollbars="none"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="1"
+            tools:listitem="@layout/story_item"
+            tools:itemCount="10" />
 
-        <ImageButton
-            android:id="@+id/messageButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:layout_marginEnd="16dp"
-            android:background="@null"
-            android:src="@drawable/message"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/instagramLogo">
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/storiesBar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_marginStart="152dp"
-                android:layout_marginTop="72dp"
-                android:scrollbars="horizontal">
-
-
-            </androidx.recyclerview.widget.RecyclerView>
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>
