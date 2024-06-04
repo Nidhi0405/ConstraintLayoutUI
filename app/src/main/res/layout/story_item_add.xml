@@ -18,7 +18,7 @@
             android:layout_margin="3dp"
             android:padding="2dp"
             android:background="@drawable/bg_round_border"
-            android:src="@drawable/user_profile"/>
+            android:src="@drawable/user_profile" />
         
         <ImageView
             android:layout_width="25dp"
