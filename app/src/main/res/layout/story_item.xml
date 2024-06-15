@@ -11,21 +11,30 @@
         android:gravity="center"
         android:background="@drawable/bg_round_gradient">
 
-        <ImageView
-            android:id="@+id/userProfile_id"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="3dp"
-            android:padding="3dp"
-            android:background="@drawable/bg_round"
-            android:src="@drawable/user_profile" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:cardCornerRadius="35dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/userProfile_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_round"
+                android:src="@drawable/user_profile"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"/>
+
+        </androidx.cardview.widget.CardView>
 
     </FrameLayout>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/title_id"
-        android:text="UserName"
-        android:gravity="center"/>
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="UserName" />
+
 </LinearLayout>

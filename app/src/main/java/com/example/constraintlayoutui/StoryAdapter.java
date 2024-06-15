@@ -79,13 +79,13 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
         public void setAddStroy(String uid, int image) {
             title.setText("Add Story");
             Bitmap myLogo = BitmapFactory.decodeResource(itemView.getContext().getResources(), image);
-            //Tools.displayImageCircle(itemView.getContext(), profile_img, myLogo);
+            profile_img.setImageBitmap(myLogo);
         }
 
         public void setStory(String uid, String sid, String name, int image) {
             title.setText(name);
             Bitmap myLogo = BitmapFactory.decodeResource(itemView.getContext().getResources(), image);
-            //Tools.displayImageCircle(itemView.getContext().getResources(), profile_img, myLogo)
+            profile_img.setImageBitmap(myLogo);
         }
     }
 }
