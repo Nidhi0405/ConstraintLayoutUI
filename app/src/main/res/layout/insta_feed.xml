@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:minHeight="2in"
         android:scaleType="fitCenter"
-        android:maxHeight="3dp"/>
+        android:maxHeight="3in"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -160,5 +160,52 @@
         android:textSize="9sp"
         app:layout_constraintStart_toStartOf="@id/userName_id"
         app:layout_constraintTop_toBottomOf="@id/userName_id" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center|start"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="15dp">
+
+            <ImageView
+                android:id="@+id/userProfile1_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:background="@drawable/bg_round"
+                android:padding="1dp"
+                android:src="@drawable/user_profile" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="View all 4 comments"
+            android:gravity="center|start"
+            android:layout_marginStart="5dp"
+            android:textColor="#616161"
+            android:textSize="11sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/date_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11/07/2023"
+        android:paddingBottom="5dp"
+        android:gravity="center|start"
+        android:layout_marginStart="5dp"
+        android:textColor="#616161"
+        android:textSize="11sp" />
 
 </LinearLayout>

@@ -35,7 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="7dp"
-                    android:src="@drawable/ic_favorite"/>
+                    android:src="@drawable/favorite"/>
 
                 <View
                     android:layout_width="8dp"
@@ -87,6 +87,7 @@
             tools:itemCount="10" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/feed_recyclerView_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none"
