@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,25 +17,25 @@
             android:layout_height="50dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp">
-    
+
             <ImageView
                 android:id="@+id/instagramLogo"
                 android:layout_width="110dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/instagram_logo"
                 app:layout_constraintStart_toStartOf="parent" />
-    
+
             <FrameLayout
+                android:id="@+id/frame_favorite"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:id="@+id/frame_favorite"
                 app:layout_constraintEnd_toStartOf="@id/frame_inbox">
-                
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="7dp"
-                    android:src="@drawable/favorite"/>
+                    android:src="@drawable/favorite" />
 
                 <View
                     android:layout_width="8dp"
@@ -43,21 +43,21 @@
                     android:layout_gravity="end"
                     android:layout_margin="15dp"
                     android:background="@drawable/bg_round"
-                    android:backgroundTint="@color/red"/>
+                    android:backgroundTint="@color/red" />
 
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/frame_inbox"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:id="@+id/frame_inbox"
                 app:layout_constraintEnd_toEndOf="parent">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/inbox"
-                    android:padding="12dp"/>
+                    android:padding="12dp"
+                    android:src="@drawable/inbox" />
 
                 <TextView
                     android:layout_width="17dp"
@@ -69,33 +69,33 @@
                     android:gravity="center"
                     android:text="10"
                     android:textColor="@color/white"
-                    android:textSize="9dp"/>
+                    android:textSize="9dp" />
 
             </FrameLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
-        
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/story_recyclerView_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="none"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
+            android:scrollbars="none"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="1"
-            tools:listitem="@layout/story_item"
-            tools:itemCount="10" />
+            tools:itemCount="10"
+            tools:listitem="@layout/story_item" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/feed_recyclerView_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="none"
             android:layout_marginTop="10dp"
             android:orientation="vertical"
+            android:scrollbars="none"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/insta_feed"
-            tools:itemCount="10"/>
+            tools:itemCount="10"
+            tools:listitem="@layout/insta_feed" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
