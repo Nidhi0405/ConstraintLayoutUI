@@ -1,101 +1,181 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="775dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp">
-
-            <ImageView
-                android:id="@+id/instagramLogo"
-                android:layout_width="110dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/instagram_logo"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <FrameLayout
-                android:id="@+id/frame_favorite"
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toStartOf="@id/frame_inbox">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="7dp"
-                    android:src="@drawable/favorite" />
-
-                <View
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_gravity="end"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/bg_round"
-                    android:backgroundTint="@color/red" />
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/frame_inbox"
-                android:layout_width="60dp"
-                android:layout_height="match_parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="12dp"
-                    android:src="@drawable/inbox" />
-
-                <TextView
-                    android:layout_width="17dp"
-                    android:layout_height="17dp"
-                    android:layout_gravity="end"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/bg_round"
-                    android:backgroundTint="@color/red"
-                    android:gravity="center"
-                    android:text="10"
-                    android:textColor="@color/white"
-                    android:textSize="9dp" />
-
-            </FrameLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/story_recyclerView_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:scrollbars="none"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="1"
-            tools:itemCount="10"
-            tools:listitem="@layout/story_item" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/feed_recyclerView_id"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            android:scrollbars="none"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:itemCount="10"
-            tools:listitem="@layout/insta_feed" />
+            android:orientation="vertical">
 
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/instagramLogo"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/instagram_logo"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/frame_favorite"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toStartOf="@id/frame_inbox">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="7dp"
+                        android:src="@drawable/favorite" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="end"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/bg_round"
+                        android:backgroundTint="@color/red" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_inbox"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="12dp"
+                        android:src="@drawable/inbox" />
+
+                    <TextView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="end"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bg_round"
+                        android:backgroundTint="@color/red"
+                        android:gravity="center"
+                        android:text="10"
+                        android:textColor="@color/white"
+                        android:textSize="9dp" />
+
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/story_recyclerView_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="1"
+                tools:itemCount="10"
+                tools:listitem="@layout/story_item" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/feed_recyclerView_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/insta_feed" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:layout_margin="5dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+        <ImageView
+            android:id="@+id/home_id"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_home"
+            android:defaultFocusHighlightEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/search_id"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/search_id"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toEndOf="@id/home_id"
+            app:layout_constraintEnd_toStartOf="@id/add_id"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/add_id"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_add"
+            app:layout_constraintStart_toEndOf="@id/search_id"
+            app:layout_constraintEnd_toStartOf="@id/reel_id"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/reel_id"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/ic_reel"
+            app:layout_constraintStart_toEndOf="@id/add_id"
+            app:layout_constraintEnd_toStartOf="@id/profile_cardView_id"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_cardView_id"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="30dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/reel_id"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/userProfile_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/bg_round"
+                    android:src="@drawable/user_profile" />
+
+            </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
